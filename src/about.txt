@@ -1,0 +1,3 @@
+Components:
+  task: <li>
+  states: normal
