@@ -8,7 +8,6 @@ class Todo {
   }
 
   toggleCompletion = () => {
-    console.log(this.isCompleted);
     this.isCompleted = !this.isCompleted;
   }
 
@@ -23,7 +22,7 @@ export const addTodo = (caption) => {
 };
 
 export const removeTodo = (id) => {
-  const removelIndex = data.findIndex(todo => todo.id === id);
+  const removelIndex = data.findIndex(todo => todo.id === +id);
   data.splice(removelIndex, 1);
   return data;
 };
@@ -44,4 +43,4 @@ export const editCaption = (id, newCaption) => {
   return data;
 };
 
-//data.push(new Todo('test todo'));
+data.push(new Todo('test todo'));

@@ -35,10 +35,15 @@ app.post('/todo', (req, resp) => {
 });
 
 app.post('/toggletodo/:todoId', (req, resp) => {
-  console.log('req.params', req.params);
   resp
     .set('Content-Type', 'application/json')
     .send(JSON.stringify(dataMethods.toggleCompletion(req.params.todoId)));
+});
+
+app.post('/deletetodo/:id', (req, res) => {
+  res
+    .set('Content-Type', 'application/json')
+    .send(JSON.stringify(dataMethods.removeTodo(req.params.id)));
 });
 
 app.all('*', indexHandler);

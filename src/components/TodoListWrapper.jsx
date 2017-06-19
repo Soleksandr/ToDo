@@ -55,7 +55,7 @@ const mapDeispatchToProps = dispatch => ({
   getInitialData: todoActions.getInitialData(dispatch),
   addTodo: todoActions.addTodo(dispatch),
   toggleComplition: todoActions.toggleComplition(dispatch),
-  deleteTodo: todoId => dispatch(todoActions.deleteTodo(todoId)),
+  deleteTodo: todoActions.deleteTodo(dispatch),
   editTodo: (todoId, newCaption) => dispatch(todoActions.editTodo(todoId, newCaption)),
 });
 

@@ -19,14 +19,14 @@ export default (state = [], action) => {
       ];
     case todoConstants.TOGGLE_COMPLITION:
       return state.map((todo) => {
-        console.log(action.payload);
         if (todo.id === action.payload.id) {
           return { ...action.payload };
         }
         return { ...todo };
       });
     case todoConstants.DELETE_TODO:
-      return state.filter(todo => todo.id !== action.payload.todoId);
+      console.log(action.payload);
+      return action.payload.data;
     case todoConstants.EDIT_TODO:
       return state.map((todo) => {
         if (todo.id === action.payload.todoId) {

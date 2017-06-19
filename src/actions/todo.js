@@ -24,10 +24,16 @@ export const toggleComplition = dispatch => todoId =>
   todoApiCalls.toggleTodo(todoId)
     .then(todo => dispatch(toggleComplitionActionCreater(todo)));
 
-export const deleteTodo = todoId => ({
+const deleteTodoActionCreater = data => ({
   type: constants.DELETE_TODO,
-  payload: { todoId },
+  payload: {
+    data,
+  },
 });
+
+export const deleteTodo = dispatch => id =>
+  todoApiCalls.removeTodo(id)
+    .then(data => dispatch(deleteTodoActionCreater(data)));
 
 export const editTodo = (todoId, newCaption) => ({
   type: constants.EDIT_TODO,

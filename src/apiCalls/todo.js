@@ -17,6 +17,10 @@ export const toggleTodo = todoId =>
     method: 'POST',
   }).then(data => data.json());
 
+export const removeTodo = id =>
+  fetch(`/deletetodo/${id}`, {
+    method: 'POST',
+  }).then(data => data.json());
 // export const postTodo = data =>
 //   fetch('./todo', {
 //     method: 'POST',
