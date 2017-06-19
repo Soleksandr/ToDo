@@ -1,0 +1,9 @@
+export const GOT_INITIAL_DATA = 'GOT_INITIAL_DATA';
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_COMPLITION = 'TOGGLE_COMPLITION';
+export const DELETE_TODO = 'DELETE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+
+export const ALL_TODOS = 'ALL_TODOS';
+export const COMPLITED_TODOS = 'COMPLITED_TOTOS';
+export const INCOMPLITED_TODOS = 'INCOMPLITED_TODOS';
